@@ -1,0 +1,255 @@
+:root {
+    --color-primary: #87C44B;
+    --color-secondary: #EFFFD6;
+    --color-text: #7A7A7A;
+    --color-accent: #61CE70;
+    --color-white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    /* color: var(--color-text); */
+}
+
+header {
+    background-color: var(--color-white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h5{
+    text-align: center;
+    color: var(--color-primary);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 8rem;
+}
+
+h2 {
+    color: black;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h3{
+    color: black;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-primary);
+}
+
+.problem-list, .solution-list, .value-prop-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.problem-item, .solution-item {
+    /* background-color: var(--color-secondary); */
+    padding: 2rem;
+    border-radius: 8px;
+    border: solid 1px black;
+}
+
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    padding: 1rem 0;
+}
+.value-prop-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.value-prop-item {
+    background-color: var(--color-secondary);
+    padding: 2rem;
+    border-radius: 8px;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+/* .value-prop-item::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 2px;
+    height: 2rem;
+    background-color: var(--color-primary);
+    transform: translateX(-50%);
+}
+
+.value-prop-item:last-child::before {
+    display: none;
+} */
+
+.value-prop-item h3 {
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+}
+
+.hero-section {
+    background-image: url('https://primas.net/wp-content/uploads/2023/03/focused-call-center-operators-during-working-process-scaled.jpg'); /* Replace with your desired image URL */
+    background-size: cover;
+    background-position: center;
+    color: var(--color-white);
+    padding: 4rem 2rem; /* Add padding for spacing */
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0); /* Semi-transparent background for better text readability */
+    padding: 2rem;
+    border-radius: 8px; /* Optional: adds rounded corners */
+}
+
+.hero-section h1 {
+    font-size: 3rem; /* Adjust font size for better visibility */
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.25rem; /* Adjust font size for better readability */
+    margin-bottom: 2rem;
+}
+
+.hero-section button {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.highlight {
+    color: var(--color-primary); /* Use the primary color */
+    font-weight: bold; /* Make it bold for emphasis */
+}
+.highlight-positive {
+    color: var(--color-accent); /* Color for positive percentages */
+    font-size: 3rem; /* Increase font size for emphasis */
+    font-weight: bold; /* Make it bold for emphasis */
+}
+
+.up-arrow {
+    color: var(--color-accent); /* Same color for the up arrow */
+    font-size: 3rem; /* Match font size */
+}
+
+.solution-title{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.icon{
+    width: 6rem;
+    height: 6rem;
+    object-fit: contain;
+}
+.icon-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.prop-item-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.prop-img{
+    width: 50%;
+    /* height: 6rem; */
+    object-fit: contain;
+}
+.solution-item-wrapper{
+    display: flex;
+    align-items:baseline;
+    /* gap: 2rem; */
+    justify-content: space-between;
+}
+.icon-solution{
+    width: 6rem;
+    height: 6rem;
+    object-fit: contain;
+}
+/* .hero-section button:hover {
+    background-color: darken(var(--color-accent), 10%);
+} */
+
