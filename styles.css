@@ -33,7 +33,7 @@ nav {
     padding: 0 2rem;
 }
 
-h5{
+h5 {
     text-align: center;
     color: var(--color-primary);
 }
@@ -74,7 +74,7 @@ h2 {
     text-align: center;
 }
 
-h3{
+h3 {
     color: black;
     font-weight: bold;
     margin-bottom: 1rem;
@@ -110,13 +110,16 @@ button:hover {
     background-color: var(--color-primary);
 }
 
-.problem-list, .solution-list, .value-prop-list {
+.problem-list,
+.solution-list,
+.value-prop-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-.problem-item, .solution-item {
+.problem-item,
+.solution-item {
     /* background-color: var(--color-secondary); */
     padding: 2rem;
     border-radius: 8px;
@@ -129,6 +132,7 @@ footer {
     text-align: center;
     padding: 1rem 0;
 }
+
 .value-prop-list {
     display: flex;
     flex-direction: column;
@@ -164,26 +168,32 @@ footer {
 }
 
 .hero-section {
-    background-image: url('https://primas.net/wp-content/uploads/2023/03/focused-call-center-operators-during-working-process-scaled.jpg'); /* Replace with your desired image URL */
+    background-image: url('https://primas.net/wp-content/uploads/2023/03/focused-call-center-operators-during-working-process-scaled.jpg');
+    /* Replace with your desired image URL */
     background-size: cover;
     background-position: center;
     color: var(--color-white);
-    padding: 4rem 2rem; /* Add padding for spacing */
+    padding: 4rem 2rem;
+    /* Add padding for spacing */
 }
 
 .hero-content {
-    background-color: rgba(0, 0, 0, 0); /* Semi-transparent background for better text readability */
+    background-color: rgba(0, 0, 0, 0);
+    /* Semi-transparent background for better text readability */
     padding: 2rem;
-    border-radius: 8px; /* Optional: adds rounded corners */
+    border-radius: 8px;
+    /* Optional: adds rounded corners */
 }
 
 .hero-section h1 {
-    font-size: 3rem; /* Adjust font size for better visibility */
+    font-size: 3rem;
+    /* Adjust font size for better visibility */
     margin-bottom: 1rem;
 }
 
 .hero-section p {
-    font-size: 1.25rem; /* Adjust font size for better readability */
+    font-size: 1.25rem;
+    /* Adjust font size for better readability */
     margin-bottom: 2rem;
 }
 
@@ -198,58 +208,247 @@ footer {
 }
 
 .highlight {
-    color: var(--color-primary); /* Use the primary color */
-    font-weight: bold; /* Make it bold for emphasis */
+    color: var(--color-primary);
+    /* Use the primary color */
+    font-weight: bold;
+    /* Make it bold for emphasis */
 }
+
 .highlight-positive {
-    color: var(--color-accent); /* Color for positive percentages */
-    font-size: 3rem; /* Increase font size for emphasis */
-    font-weight: bold; /* Make it bold for emphasis */
+    color: var(--color-accent);
+    /* Color for positive percentages */
+    font-size: 3rem;
+    /* Increase font size for emphasis */
+    font-weight: bold;
+    /* Make it bold for emphasis */
 }
 
 .up-arrow {
-    color: var(--color-accent); /* Same color for the up arrow */
-    font-size: 3rem; /* Match font size */
+    color: var(--color-accent);
+    /* Same color for the up arrow */
+    font-size: 3rem;
+    /* Match font size */
 }
 
-.solution-title{
+.solution-title {
     display: flex;
     align-items: center;
     gap: 1.5rem;
 }
 
-.icon{
+.icon {
     width: 6rem;
     height: 6rem;
     object-fit: contain;
 }
-.icon-wrapper{
+
+.icon-wrapper {
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
 }
-.prop-item-wrapper{
+
+.prop-item-wrapper {
     display: flex;
     align-items: center;
     gap: 2rem;
 }
-.prop-img{
+
+.prop-img {
     width: 50%;
     /* height: 6rem; */
     object-fit: contain;
 }
-.solution-item-wrapper{
+
+.solution-item-wrapper {
     display: flex;
-    align-items:baseline;
+    align-items: baseline;
     /* gap: 2rem; */
     justify-content: space-between;
 }
-.icon-solution{
+
+.icon-solution {
     width: 6rem;
     height: 6rem;
     object-fit: contain;
 }
+
+
+/*MARQUEE*/
+.marquee {
+    overflow: hidden;
+    position: relative;
+    /* display: block; */
+    width: 100vw;
+    /* overflow: hidden; */
+}
+
+.marquee:hover div {
+    animation-play-state: paused !important;
+}
+
+.marquee div:nth-child(1) {
+    display: flex;
+    position: relative;
+    gap: 4rem;
+    align-items: center;
+    /* overflow: hidden; */
+    flex-wrap: nowrap;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee div:nth-child(2) {
+    display: flex;
+    position: absolute;
+    top: 0;
+    gap: 4rem;
+    align-items: center;
+    left: 100%;
+    /* overflow: hidden; */
+    flex-wrap: nowrap;
+    /* animation: 20s linear infinite 20s marquee2; */
+    animation: marquee2 20s linear 10s infinite;
+}
+
+@keyframes marquee {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: -130%;
+    }
+}
+
+@keyframes marquee2 {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: -130%;
+    }
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.menu {
+    width: 300px;
+    padding: 20px;
+}
+
+.menu-item {
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.menu-item .category {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.menu-item.active .category {
+    color: var(--color-accent);
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.menu-item .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.menu-item:hover .title {
+    color: var(--color-primary);
+}
+
+.menu-item.active .title {
+    color: var(--color-primary);
+}
+
+.content-area {
+    flex: 1;
+    background: white;
+    padding: 40px;
+    border: 1px solid #eee;
+    margin: 20px;
+    position: relative;
+}
+
+.content-area::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    width: 100%;
+    height: 100%;
+    background: var(--color-accent);
+    z-index: -1;
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+.category-label {
+    margin-bottom: 20px;
+}
+
+.content-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+.content-description {
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.challenge,
+.solution {
+    margin-top: 30px;
+}
+
+.challenge h2,
+.solution h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.challenge-icon,
+.solution-icon {
+    width: 2.2rem;
+    height: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
 /* .hero-section button:hover {
     background-color: darken(var(--color-accent), 10%);
 } */
-
